@@ -65,7 +65,7 @@ void coom_8010_task(void *parm)
 					go_8010_test_tesk1(GO_8010_1,0,tamp_task(receive_angle[0],tete,target_angle[0]),0,0.6,0.05);
 					vTaskDelayUntil(&comm_8010_time, 8);
 					go_8010_test_tesk1(GO_8010_2,0,tamp_task(receive_angle[1],tete,target_angle[1]),0,0.6,0.05);
-				
+					vTaskDelayUntil(&comm_8010_time, 8);
 				
 				
 				
