@@ -14,7 +14,7 @@ IMU_Data_t BMI088;
 //#define GyOFFSET 0
 //#define GzOFFSET 0
 #define gNORM 9.876785f
-#define CaliTimes 10000//È¡1w´ÎÊı¾İ,Ğ£×¼10s
+#define CaliTimes 10000//å–1wæ¬¡æ•°æ®,æ ¡å‡†10s
 extern fp32 gyro_offset[3];
 //static void Calibrate_MPU_Offset(IMU_Data_t *bmi088);
 
@@ -108,7 +108,7 @@ uint8_t BMI088_init(void)
 	error |= bmi088_accel_init();
 	error |= bmi088_gyro_init();
 
-	//Calibrate_MPU_Offset(&BMI088); -- ¸Ä³ÉÒÔÏÂ´úÂë
+	//Calibrate_MPU_Offset(&BMI088); -- æ”¹æˆä»¥ä¸‹ä»£ç 
 	for(caliCount=0;caliCount<CaliTimes;caliCount++)
 	{
 		BMI088_gyro_read_muli_reg(BMI088_GYRO_CHIP_ID, buf, 8);
